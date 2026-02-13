@@ -1,0 +1,129 @@
+<!-- Informa ao navegador que o documento utiliza HTML5 -->
+<!DOCTYPE html>
+
+<!-- Elemento raiz da página.
+     lang="pt-br" indica que o idioma é português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Define o conjunto de caracteres como UTF-8,
+         permitindo acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a telas de celular e tablet
+         (responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Conecta o arquivo de estilos CSS da página inicial -->
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Spoiler Club</title>
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO DO SITE
+         ========================= -->
+    <header>
+
+        <!-- Container que organiza os elementos do cabeçalho -->
+        <div class="header-container">
+
+            <!-- Área da logo -->
+            <div class="logo">
+                <!-- Imagem da logo do site -->
+                <img src="images/9bc037e3-6cf5-42ea-b38a-3bbbf82689cf - Editado.png" alt="Logo" width="60">
+            </div>
+
+            <!-- Menu de navegação principal -->
+            <nav class="menu">
+                <ul>
+                    <!-- Cada item é um link para outra página do site -->
+                    <li><a href="html/inicio.html">Início</a></li>
+                    <li><a href="html/resenhas.html">Resenhas</a></li>
+                    <li><a href="html/sobre-nos.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================
+         CARROSSEL DE IMAGENS
+         ========================= -->
+
+    <!-- Envolve todo o carrossel -->
+    <div class="carousel-wrapper">
+
+        <!-- Container interno que segura os slides -->
+        <div class="carousel-container">
+            
+            <!-- Slide 1 -->
+            <section class="slide" id="slide1">
+
+                <!-- Botão de voltar para o slide anterior
+                     (no caso, o slide4 para criar um loop) -->
+                <a href="#slide4" class="prev">&#10094;</a>
+
+                <!-- Botão de avançar para o próximo slide -->
+                <a href="#slide2" class="next">&#10095;</a>
+
+                <!-- Imagem do slide -->
+                <img src="images/1.png" alt="">
+            </section>
+
+            <!-- Slide 2 -->
+            <section class="slide" id="slide2">
+
+                <!-- Voltar para o slide anterior -->
+                <a href="#slide1" class="prev">&#10094;</a>
+
+                <!-- Imagem do slide -->
+                <img src="images/2.png" alt="">
+
+                <!-- Avançar para o próximo slide -->
+                <a href="#slide3" class="next">&#10095;</a>
+            </section>
+
+            <!-- Slide 3 -->
+            <section class="slide" id="slide3">
+
+                <!-- Voltar para o slide anterior -->
+                <a href="#slide2" class="prev">&#10094;</a>
+
+                <!-- Avançar para o próximo slide -->
+                <a href="#slide4" class="next">&#10095;</a>
+
+                <!-- Imagem do slide -->
+                <img src="images/3.png" alt="">
+            </section>
+
+            <!-- Slide 4 -->
+            <section class="slide" id="slide4">
+
+                <!-- Voltar para o slide anterior -->
+                <a href="#slide3" class="prev">&#10094;</a>
+
+                <!-- Imagem do slide -->
+                <img src="images/site spoiler club.png" alt="">
+
+                <!-- Avançar para o primeiro slide
+                     (fecha o loop do carrossel) -->
+                <a href="#slide1" class="next">&#10095;</a>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- =========================
+         RODAPÉ DO SITE
+         ========================= -->
+    <footer class="main-footer">
+
+        <!-- Texto de direitos autorais -->
+        <p>&copy; 2026 Spoiler Club - Aline, Nina e Graziele</p>
+    </footer>
+
+</body>
+</html>

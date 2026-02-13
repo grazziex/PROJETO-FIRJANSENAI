@@ -1,0 +1,144 @@
+
+/* Seleciona todos os elementos, remove margens/preenchimentos padrão e ajusta o cálculo de tamanho */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+/* Define a cor de fundo (Vermelho), a fonte elegante e a cor do texto principal */
+body { background-color:#B22222;
+    font-family: 'Georgia', serif; 
+    color: #000; 
+}
+.header-container {
+    display: flex; /* Alinha logo e menu lado a lado */
+    justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 15px 10%; /* Espaçamento interno (topo/baixo e laterais) */
+    background: #fcf6dc; /* Fundo bege claro */
+    border-bottom: 2px solid #eaeaea; /* Linha sutil no rodapé do cabeçalho */
+}
+/* Container da logo: alinha ícone/texto e define espaço entre eles */
+.logo { display: flex;
+        align-items: center;
+        gap: 10px; }
+
+/* Configuração da imagem da logo com efeito de transição suave */
+.logo img {
+    width: 150px; 
+    height: auto;
+    transition: 0.3s; /* Prepara para efeitos de hover, se houver */
+}
+/* Remove as bolinhas da lista e coloca os itens lado a lado */
+.menu ul { display: flex;
+        list-style: none; 
+        gap: 20px; 
+}
+
+/* Estiliza os links do menu: remove sublinhado, muda a cor e deixa negrito */
+.menu a { text-decoration: none;
+        color: #5d4037; 
+        font-weight: bold; 
+}
+.grid-container {
+    display: grid; /* Ativa o modo de grade */
+    /* Cria colunas automáticas que se ajustam ao tamanho da tela (mínimo 180px) */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 50px;
+}
+
+/* Estilo do card individual do livro */
+.book-card {
+    text-decoration: none;
+    background: #000; /* Fundo preto para destacar a capa */
+    padding: 15px;
+    border-radius: 4px;
+    transition: 0.3s; /* Suaviza o movimento de subir no hover */
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+/* Efeito ao passar o mouse: o card sobe 10px e ganha borda vermelha */
+.book-card:hover {
+    transform: translateY(-10px);
+    border-color: #B22222;
+}
+
+.book-card img { width: 100%; border-radius: 2px; } /* Imagem ocupa todo o card */
+.book-card h3 { color: #F5F5DC; margin-top: 10px; font-size: 1rem; } /* Título do livro em bege */
+/* Camada escura que cobre toda a tela atrás do modal */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Fundo preto transparente */
+    display: none; /* Começa invisível */
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+/* O TRUQUE: Se o ID do elemento estiver na URL (ex: meusite.com/#livro1), ele aparece */
+.modal-overlay:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa branca/bege onde fica o conteúdo do modal */
+.modal-content {
+    background: #F5F5DC;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative; /* Necessário para posicionar o botão de fechar */
+    border: 4px solid #B22222;
+    text-align: center;
+    animation: zoomIn 0.3s ease; /* Aplica a animação de entrada */
+}
+
+/* Animação para o modal surgir crescendo e ganhando opacidade */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.img-modal { width: 150px; border: 2px solid #000; margin-bottom: 20px; }
+
+/* Caixa de texto com rolagem lateral para sinopses longas */
+.texto-scroll {
+    max-height: 250px;
+    overflow-y: auto; /* Adiciona a barra de rolagem se o texto for grande */
+    text-align: justify;
+    margin: 20px 0;
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+/* O "X" para fechar (na verdade é um link que aponta para #, tirando o alvo do modal) */
+.close-btn {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #B22222;
+    font-weight: bold;
+}
+
+/* Estilização do botão de compra da Amazon */
+.btn-amazon {
+    display: inline-block;
+    background: #B22222;
+    color: #F5F5DC;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: 0.3s;
+}
+
+.btn-amazon:hover { background: #000; color: #B22222; }
+
+/* Estilo simples para o rodapé da página */
+.main-footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; background-color: #fcf6dc; }
+

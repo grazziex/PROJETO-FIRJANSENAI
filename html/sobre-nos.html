@@ -1,0 +1,109 @@
+<!-- Declaração do tipo de documento.
+     Informa ao navegador que estamos usando HTML5 -->
+<!DOCTYPE html>
+
+<!-- Elemento raiz da página.
+     lang="pt-br" define que o conteúdo está em português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres como UTF-8,
+         permitindo acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a diferentes tamanhos de tela
+         (importante para celular e tablet) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Conecta o arquivo CSS responsável pelo visual da página -->
+    <link rel="stylesheet" href="css/sobre-nos.css">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Spoiler Club</title>
+</head>
+
+<!-- Início do corpo da página (conteúdo visível) -->
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+         ========================= -->
+    <header>
+
+        <!-- Container para organizar logo e menu -->
+        <div class="header-container">
+
+            <!-- Área da logo -->
+            <div class="logo">
+                <!-- Imagem da logo do site -->
+                <img src="images/9bc037e3-6cf5-42ea-b38a-3bbbf82689cf - Editado.png" alt="Logo" width="60">
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <ul>
+                    <!-- Links para as outras páginas do site -->
+                    <li><a href="html/inicio.html">Início</a></li>
+                    <li><a href="html/resenhas.html">Resenhas</a></li>
+                    <li><a href="html/sobre-nos.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+         ========================= -->
+    <main>
+
+        <!-- Seção que organiza os cards em formato de grade -->
+        <section class="card-grid">
+            
+            <!-- Card da Aline -->
+            <div class="book-card">
+                <!-- Nome -->
+                <h2>Aline</h2>
+
+                <!-- Descrição pessoal -->
+                <p>
+                    Olá :) , eu sou a Aline.
+                    Comecei recentemente na área de tecnologia e amei a ideia
+                    de misturar livros (um hobby que amo) com um blog personalizado.
+                    Amo artes e plantas.
+                </p>
+            </div>
+
+            <!-- Card da Nina -->
+            <div class="book-card">
+                <h2>Nina</h2>
+                <p>
+                    Oieee, eu sou a Nina.
+                    Sou estudante de desenvolvimento web.
+                    Meus hobbies são leitura e maratonar séries,
+                    e esse espacinho foi criado com muito amor.
+                </p>
+            </div>
+
+            <!-- Card da Graziele -->
+            <div class="book-card">
+                <h2>Graziele</h2>
+                <p>
+                    Oiiii, eu sou a Grazi.
+                    Estudo desenvolvimento web e nas horas vagas
+                    faço luta e natação. Apaixonada por leitura.
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- =========================
+         RODAPÉ
+         ========================= -->
+    <footer class="main-footer">
+
+        <!-- Texto de direitos autorais -->
+        <p>&copy; 2026 Spoiler Club - Aline, Nina e Graziele</p>
+    </footer>
+
+</body>
+</html>

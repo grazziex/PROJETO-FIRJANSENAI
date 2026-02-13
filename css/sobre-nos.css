@@ -1,0 +1,86 @@
+* { 
+    margin: 0;           /* Remove a margem padrão do navegador em todos os elementos */
+    padding: 0;          /* Remove o preenchimento padrão em todos os elementos */
+    box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho total do elemento */
+}
+
+body { 
+    background-color: #B22222;    /* Cor de fundo da página (Vermelho fogo) */
+    font-family: 'Georgia', serif; /* Fonte clássica e elegante */
+    color: #000;                  /* Cor do texto principal (Preto) */
+}
+.header-container {
+    display: flex;               /* Ativa o Flexbox para alinhar itens horizontalmente */
+    justify-content: space-between; /* Espaça a logo à esquerda e o menu à direita */
+    align-items: center;         /* Centraliza os itens verticalmente */
+    padding: 15px 10%;           /* Espaçamento interno: 15px topo/baixo e 10% nas laterais */
+    background: #fcf6dc;         /* Cor de fundo bege claro */
+    border-bottom: 2px solid #eaeaea; /* Linha cinza clara bem fina na parte inferior */
+}
+
+.logo { 
+    display: flex;               /* Permite que itens dentro da logo fiquem lado a lado */
+    align-items: center;         /* Alinha verticalmente imagem e possível texto da logo */
+    gap: 10px;                   /* Espaço de 10px entre elementos da logo */
+}
+
+.logo img {
+    width: 150px;                /* Define a largura fixa da logo */
+    height: auto;                /* Mantém a proporção da altura da imagem */
+    transition: 0.3s;            /* Suaviza mudanças (como redimensionamento em telas menores) */
+}
+
+.menu ul { 
+    display: flex;               /* Coloca os itens da lista do menu em linha */
+    list-style: none;            /* Remove as "bolinhas" padrão da lista */
+    gap: 20px;                   /* Espaço de 20px entre cada item do menu */
+}
+
+.menu a { 
+    text-decoration: none;       /* Remove o sublinhado dos links */
+    color: #5d4037;              /* Cor marrom escuro para os links */
+    font-weight: bold;           /* Deixa o texto do menu em negrito */
+}
+.card-grid {
+    display: grid;               /* Ativa o sistema de grade (Grid) */
+    /* Cria colunas que se ajustam sozinhas: mínimo 220px, máximo 1 fração do espaço */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;                   /* Espaço de 30px entre um card e outro */
+    padding: 50px 10%;           /* Espaçamento generoso ao redor do grid */
+    min-height: 70vh;            /* O grid terá no mínimo 70% da altura da tela visível */
+}
+.book-card {
+    background-color: #fcf6dc;   /* Cor de fundo bege igual ao cabeçalho */
+    padding: 30px;               /* Espaço interno para o texto não encostar na borda */
+    border-radius: 12px;         /* Arredonda os cantos do card */
+    text-align: center;          /* Centraliza todo o texto dentro do card */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra suave para dar profundidade */
+    transition: transform 0.3s ease; /* Define que a animação de movimento dure 0.3s */
+    border: 1px solid #dcd7bb;   /* Borda fina num tom de bege levemente mais escuro */
+}
+
+/* Efeito ao passar o mouse */
+.book-card:hover {
+    transform: scale(1.05);      /* Aumenta o tamanho do card em 5% (efeito de zoom) */
+}
+
+/* Títulos dentro do card */
+.book-card h2 {
+    color: #5d4037;              /* Marrom escuro */
+    margin-bottom: 15px;         /* Espaço entre o nome e a descrição */
+    font-family: 'Georgia', serif;
+}
+
+/* Parágrafos dentro do card */
+.book-card p {
+    color: #333;                 /* Cinza muito escuro para melhor leitura */
+    line-height: 1.6;            /* Espaçamento entre linhas (melhora a legibilidade) */
+    font-size: 1rem;             /* Tamanho padrão da fonte (16px) */
+}
+.main-footer { 
+    text-align: center;          /* Centraliza o texto do rodapé */
+    padding: 40px;               /* Espaçamento interno */
+    color: #888;                 /* Cor de texto cinza (discreto) */
+    font-size: 0.8rem;           /* Fonte menor que o padrão */
+    background-color: #fcf6dc;   /* Fundo bege para combinar com o topo */
+}

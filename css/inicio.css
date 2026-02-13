@@ -1,0 +1,132 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+* {
+    margin: 0;   /* Remove as margens padrão do navegador */
+    padding: 0;  /* Remove o preenchimento padrão do navegador */
+}
+body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
+
+/* ============================================================
+   CABEÇALHO (HEADER)
+   ============================================================ */
+.header-container {
+    display: flex;                /* Ativa o modo flexbox para alinhar itens */
+    justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+    align-items: center;           /* Alinha verticalmente os itens no centro */
+    padding: 15px 10%;             /* Espaçamento em cima/baixo e 10% nas laterais */
+    background: #fcf6dc;           /* Cor de fundo bege clara */
+    border-bottom: 2px solid #eaeaea; /* Linha cinza fina na parte de baixo */
+}
+
+.logo { 
+    display: flex;         /* Faz com que os itens dentro da logo fiquem lado a lado */
+    align-items: center;   /* Alinha o ícone e o texto da logo no centro */
+    gap: 10px;             /* Cria um espaço de 10px entre a imagem e o texto */
+}
+.logo img{
+    width: 150px; /* Aumenta o tamanho da imagem da logo */
+    height: auto;
+    transition: 0.3s
+}
+
+.menu ul { 
+    display: flex;         /* Coloca os itens do menu (li) em linha */
+    list-style: none;      /* Remove as bolinhas da lista */
+    gap: 20px;             /* Cria um espaço de 20px entre cada item do menu */
+}
+
+.menu a { 
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #5d4037;        /* Define a cor marrom para o texto */
+    font-weight: bold;     /* Deixa o texto em negrito */
+}
+
+/* ============================================================
+   CARROSSEL (CONTAINER PRINCIPAL)
+   ============================================================ */
+.carousel-container {
+    display: flex;            /* Coloca os slides um ao lado do outro */
+    width: 100vw;             /* Largura total da janela do navegador */
+    height: 100vh;            /* Altura total da janela do navegador */
+    overflow-x: auto;         /* Permite rolar para os lados se o conteúdo transbordar */
+    scroll-snap-type: x mandatory; /* Efeito "imã": o slide trava automaticamente na tela */
+    scroll-behavior: smooth;  /* Faz a transição de rolagem ser suave, não brusca */
+}
+
+/* Esconde a barra de rolagem (visual mais limpo em navegadores Chrome/Safari) */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+.carousel-wrapper {
+    position: relative; /* Permite que os botões fiquem "presos" a este container */
+    width: 100vw;
+    height: 100vh;
+}
+/* ============================================================
+   BOTÕES DE NAVEGAÇÃO (PREV/NEXT) - AJUSTADOS
+   ============================================================ */
+
+.prev, .next {
+    position: absolute;   /* Flutua sobre o carrossel */
+    top: 50%;             /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino de centralização */
+    z-index: 10;          /* Fica à frente dos slides */
+    
+    background-color: rgba(245, 246, 220, 0.7); /* Bege claro com transparência */
+    color: #5d4037;       /* Marrom do seu menu */
+    padding: 25px 15px;   /* Tamanho do botão */
+    text-decoration: none;/* Remove o sublinhado */
+    font-size: 2rem;      /* Tamanho da seta */
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    background-color: #fcf6dc; /* Fica sólido ao passar o mouse */
+}
+
+/* Botão Anterior: Cola na borda esquerda da tela */
+.prev { 
+    left: 0; 
+    border-radius: 0 10px 10px 0; /* Arredonda só o canto interno */
+}
+
+/* Botão Próximo: Cola na borda direita da tela */
+.next { 
+    right: 0; 
+    border-radius: 10px 0 0 10px; /* Arredonda só o canto interno */
+}
+
+
+/* ============================================================
+   SLIDES INDIVIDUAIS
+   ============================================================ */
+.slide {
+    flex: 0 0 100vw;          /* ADICIONE ISSO: Garante que o slide não encolha */
+    min-width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: #B22222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;       /* ADICIONE ISSO: Para os botões grudarem no slide */
+}
+.slide img {
+    max-width: 100%; /* Limita a largura da imagem para não ultrapassar o slide */
+    max-height: 130%; /* Limita a altura da imagem para não ultrapassar o slide */
+    object-fit: contain; /* Garante que a imagem mantenha suas proporções */
+}
+
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+.main-footer { 
+    text-align: center;       /* Centraliza o texto */
+    padding: 40px;            /* Espaçamento interno grande */
+    color: #888;              /* Cor cinza para o texto */
+    font-size: 0.8rem;        /* Fonte pequena */
+    background-color: #fcf6dc; /* Fundo bege igual ao cabeçalho */
+}

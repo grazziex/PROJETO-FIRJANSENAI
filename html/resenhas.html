@@ -1,0 +1,125 @@
+<!-- Declaração do tipo de documento: informa ao navegador que é um HTML5 -->
+<!DOCTYPE html>
+
+<!-- Elemento raiz da página, idioma definido como português do Brasil -->
+<html lang="pt-BR">
+<head>
+    <!-- Define o conjunto de caracteres para suportar acentos e símbolos -->
+    <meta charset="UTF-8">
+
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Resenhas - Spoiler Club</title>
+
+    <!-- Importa o arquivo de estilos CSS para estilizar a página -->
+    <link rel="stylesheet" href="resenhas.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho principal do site -->
+    <header class="main-header">
+
+        <!-- Container para organizar o conteúdo do cabeçalho -->
+        <div class="header-container">
+
+            <!-- Área da logo -->
+            <div class="logo">
+                <!-- Imagem da logo do site -->
+                <img src="images/9bc037e3-6cf5-42ea-b38a-3bbbf82689cf - Editado.png" alt="Logo" width="60">
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <ul>
+                    <!-- Link para a página inicial -->
+                    <li><a href="inicio.html">Início</a></li>
+
+                    <!-- Link para a página de resenhas -->
+                    <li><a href="resenhas.html">Resenhas</a></li>
+
+                    <!-- Link para a página sobre nós -->
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="grid-container">
+
+        <!-- Cada "book-card" é um cartão clicável de livro -->
+        <!-- O link (#livro1) leva ao modal correspondente -->
+
+        <a href="#livro1" class="book-card">
+            <!-- Imagem do livro -->
+            <img src="images/41hUSnFXKvL._SY445_SX342_ML2_.jpg" alt="Noites Brancas">
+            <!-- Título do livro -->
+            <h3>Noites Brancas</h3>
+        </a>
+
+        <!-- Repetição do mesmo padrão para os outros livros -->
+        <a href="#livro2" class="book-card">
+            <img src="images/81LxzXa2MWL._SY385_.jpg" alt="Morros Uivantes">
+            <h3>Morros Uivantes</h3>
+        </a>
+
+        <a href="#livro3" class="book-card">
+            <img src="images/41eeVxzSMKL._SY445_SX342_ML2_.jpg" alt="O Pequeno Príncipe">
+            <h3>O Pequeno Príncipe</h3>
+        </a>
+
+        <!-- Os demais seguem o mesmo padrão -->
+        <!-- Cada um aponta para um modal específico -->
+        <!-- Isso permite abrir uma “janela” com mais informações -->
+        
+        <!-- (continua o mesmo padrão até o livro 11) -->
+    </main>
+
+    <!-- MODAIS DOS LIVROS -->
+    <!-- Cada modal aparece quando o link com o ID correspondente é clicado -->
+
+    <!-- Modal do livro 1 -->
+    <div id="livro1" class="modal-overlay">
+
+        <!-- Caixa central do modal -->
+        <div class="modal-content">
+
+            <!-- Botão para fechar o modal (volta para o topo) -->
+            <a href="#" class="close-btn">&times;</a>
+
+            <!-- Imagem do livro no modal -->
+            <img src="images/41hUSnFXKvL._SY445_SX342_ML2_.jpg" class="img-modal">
+
+            <!-- Título completo do livro -->
+            <h2>Noites brancas - Fiódor Dostoiévski</h2>
+
+            <!-- Área com rolagem de texto -->
+            <div class="texto-scroll">
+
+                <!-- Resumo do livro -->
+                <p><strong>Resumo:</strong> ... </p>
+
+                <!-- Opinião das autoras -->
+                <p><strong>Nossa Opinião:</strong> ... </p>
+            </div>
+
+            <!-- Botão para comprar o livro na Amazon -->
+            <a href="https://www.amazon.com.br/Noites-brancas-Fi%C3%B3dor-Dostoi%C3%A9vski/dp/8573263350" 
+               target="_blank" 
+               class="btn-amazon">
+               🛒 Comprar na Amazon
+            </a>
+        </div>
+    </div>
+
+    <!-- Os modais dos outros livros seguem a mesma estrutura -->
+    <!-- Apenas mudam o ID, imagem, título, resumo e link -->
+
+    <!-- Rodapé do site -->
+    <footer class="main-footer">
+        <!-- Texto de direitos autorais -->
+        <p>&copy; 2026 Spoiler Club - Aline, Nina e Graziele</p>
+    </footer>
+
+</body>
+</html>
