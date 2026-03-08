@@ -1,90 +1,157 @@
 /* ============================================================
    CONFIGURAÇÕES GERAIS
    ============================================================ */
+
+/* O seletor * seleciona TODOS os elementos da página.
+   Aqui estamos resetando alguns estilos padrão do navegador */
 * { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+    margin: 0;              /* Remove margens padrão */
+    padding: 0;             /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Faz com que largura e altura incluam padding e borda */
 }
 
+/* Estilo geral da página */
 body { 
-    background-color: #B22222; 
-    font-family: 'Georgia', serif; 
-    color: #000; 
+    background-color: #B22222;        /* Cor de fundo vermelho escuro */
+    font-family: 'Georgia', serif;    /* Define a fonte principal da página */
+    color: #000;                      /* Cor padrão do texto (preto) */
 }
 
 /* ============================================================
    CABEÇALHO (HEADER)
    ============================================================ */
+
+/* Container principal do cabeçalho */
 .header-container {
+    /* Flexbox permite alinhar elementos horizontalmente */
     display: flex;
+    /* Coloca espaço entre logo e menu */
     justify-content: space-between;
+    /* Alinha verticalmente no centro */
     align-items: center;
+    /* Espaçamento interno do cabeçalho */
     padding: 15px 10%;
+    /* Cor de fundo do header */
     background: #fcf6dc;
+    /* Linha na parte inferior do cabeçalho */
     border-bottom: 2px solid #eaeaea;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; }
+
+/* Área da logo */
+.logo { 
+    display: flex;       /* Permite alinhar elementos dentro da logo */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px;           /* Espaço entre itens da logo */
+}
+
+/* Estilo da imagem da logo */
 .logo img {
-    width: 150px;
-    height: auto;
+
+    width: 150px;   /* Define a largura da logo */
+    height: auto;   /* Mantém proporção original */
+
+    /* Cria uma animação suave ao alterar propriedades */
     transition: 0.3s;
 }
 
-.menu ul { display: flex; list-style: none; gap: 20px; }
-.menu a { 
-    text-decoration: none;
-    color: #5d4037;
-    font-weight: bold; 
+
+/* ============================================================
+   MENU DE NAVEGAÇÃO
+   ============================================================ */
+
+/* Lista do menu */
+.menu ul { 
+    display: flex;       /* Coloca os itens lado a lado */
+    list-style: none;    /* Remove as bolinhas da lista */
+    gap: 20px;           /* Espaço entre os links */
 }
 
-/* Container que organiza os cards em grade (grid) */
+/* Estilo dos links do menu */
+.menu a { 
+    text-decoration: none; /* Remove sublinhado */
+    color: #5d4037;        /* Cor marrom */
+    font-weight: bold;     /* Deixa o texto em negrito */
+}
+
+/* ============================================================
+   GRID DE CARDS
+   ============================================================ */
+
+/* Container que organiza os cards em formato de grade */
 .card-grid {
     display: grid;
-    /* Divide em colunas iguais que se ajustam sozinhas (mínimo 220px) */
+    /* Cria colunas automáticas.
+       Cada card terá no mínimo 220px e ocupará o espaço disponível */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;      /* Espaço entre os cards */
+    gap: 30px; /* Espaço entre os cards */
+    /* Espaçamento interno da seção */
     padding: 50px 10%; 
-    min-height: 70vh; /* Garante que o conteúdo ocupe a tela antes do rodapé */
+    /* Garante que a área tenha altura mínima,
+       evitando que o rodapé fique "subindo" */
+    min-height: 70vh;
 }
 
-/* O Card Bege individual */
+/* ============================================================
+   CARD INDIVIDUAL
+   ============================================================ */
+
+/* Estilo de cada card (caixinha de perfil) */
 .book-card {
-    background-color: #fcf6dc; /* Bege igual ao header */
-    padding: 30px;
-    border-radius: 12px;       /* Bordas arredondadas */
-    text-align: center;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-    transition: transform 0.3s ease; /* Efeito de movimento */
+    /* Cor de fundo bege (mesma do cabeçalho) */
+    background-color: #fcf6dc;
+    padding: 30px;      /* Espaçamento interno */
+    border-radius: 12px; /* Cantos arredondados */
+    text-align: center;  /* Centraliza o texto */
+    /* Cria uma sombra suave para dar profundidade */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    /* Animação suave ao passar o mouse */
+    transition: transform 0.3s ease;
+    /* Borda suave */
     border: 1px solid #dcd7bb;
 }
 
-/* Efeito de destaque ao passar o mouse */
+/* ============================================================
+   EFEITO AO PASSAR O MOUSE
+   ============================================================ */
+
+/* Quando o mouse passa por cima do card */
 .book-card:hover {
-    transform: scale(1.05); /* Aumenta o card levemente */
+    /* Aumenta levemente o card */
+    transform: scale(1.05);
 }
+
+/* ============================================================
+   TÍTULOS DOS CARDS
+   ============================================================ */
 
 /* Estilo dos nomes (Aline, Nina, Graziele) */
 .book-card h2 {
-    color: #5d4037; /* Marrom para contraste */
-    margin-bottom: 15px;
-    font-family: 'Georgia', serif;
+    color: #5d4037; /* Cor marrom */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-family: 'Georgia', serif; /* Mantém a fonte elegante */
 }
 
-/* Estilo do texto de descrição */
+/* ============================================================
+   TEXTO DOS CARDS
+   ============================================================ */
+
+/* Estilo do parágrafo dentro dos cards */
 .book-card p {
-    color: #333;
-    line-height: 1.6;
-    font-size: 1rem;
+    color: #333;        /* Cinza escuro para leitura confortável */
+    line-height: 1.6;   /* Espaçamento entre linhas */
+    font-size: 1rem;    /* Tamanho padrão do texto */
 }
+
 /* ============================================================
    RODAPÉ (FOOTER)
    ============================================================ */
+
+/* Estilo do rodapé da página */
 .main-footer { 
-    text-align: center; 
-    padding: 40px; 
-    color: #888; 
-    font-size: 0.8rem; 
-    background-color: #fcf6dc; 
+    text-align: center;  /* Centraliza o texto */
+    padding: 40px;       /* Espaçamento interno */
+    color: #888;         /* Cor do texto (cinza claro) */
+    font-size: 0.8rem;   /* Texto menor */
+    background-color: #fcf6dc; /* Fundo bege igual ao header */
 }
