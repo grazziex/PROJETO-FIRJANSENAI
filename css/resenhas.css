@@ -1,7 +1,61 @@
-/* CORES: Bege (#F5F5DC), Vermelho (#B22222), Preto (#000000) */
+/* ============================================================
+   CORES DO SITE
+   ============================================================ */
+/* Bege (#F5F5DC)
+   Vermelho (#B22222)
+   Preto (#000000)
+   Essas são as cores principais usadas no design do site */
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
+
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* 
+O seletor * seleciona TODOS os elementos da página.
+
+margin: 0
+Remove as margens padrão que o navegador aplica.
+
+padding: 0
+Remove os espaçamentos internos padrão.
+
+box-sizing: border-box
+Faz com que largura e altura incluam padding e borda,
+o que deixa o layout muito mais previsível.
+*/
+
+
+body { 
+    background-color:#B22222; 
+    font-family: 'Georgia', serif; 
+    color: #000; 
+}
+
+/*
+Define o estilo geral da página:
+
+background-color
+Cor de fundo vermelho escuro.
+
+font-family
+Fonte principal do site.
+
+color
+Cor padrão dos textos.
+*/
+
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -11,24 +65,168 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     border-bottom: 2px solid #eaeaea;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; }
+/*
+Container principal do cabeçalho.
+
+display: flex
+Usa Flexbox para alinhar os elementos.
+
+justify-content: space-between
+Coloca um item de cada lado (logo à esquerda e menu à direita).
+
+align-items: center
+Centraliza verticalmente os elementos.
+
+padding
+Cria espaçamento interno.
+
+background
+Cor de fundo bege claro.
+
+border-bottom
+Cria uma linha sutil na parte inferior do cabeçalho.
+*/
+
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+/*
+Área da logo.
+
+display:flex
+Mantém itens alinhados em linha.
+
+gap
+Define espaço entre elementos.
+*/
+
+
 .logo img{
-    width: 150px; /* Aumenta o tamanho da imagem da logo */
+    width: 150px;
     height: auto;
     transition: 0.3s
 }
-.logo-texto { font-weight: bold; font-size: 1.5rem; color: #5d4037; }
 
-.menu ul { display: flex; list-style: none; gap: 20px; }
-.menu a { text-decoration: none; color: #5d4037; font-weight: bold; }
+/*
+Define o tamanho da imagem da logo.
 
-/* GRID DE CAPAS */
+width
+Largura fixa.
+
+height:auto
+Mantém a proporção da imagem.
+
+transition
+Cria uma animação suave quando houver mudanças.
+*/
+
+
+.logo-texto { 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: #5d4037; 
+}
+
+/*
+Estilo para um possível texto da logo.
+
+font-weight
+Deixa o texto em negrito.
+
+font-size
+Aumenta o tamanho da fonte.
+
+color
+Define a cor marrom.
+*/
+
+
+/* ============================================================
+   MENU DE NAVEGAÇÃO
+   ============================================================ */
+
+.menu ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 20px; 
+}
+
+/*
+Lista do menu.
+
+display:flex
+Coloca os itens lado a lado.
+
+list-style:none
+Remove as bolinhas da lista.
+
+gap
+Cria espaço entre os itens.
+*/
+
+
+.menu a { 
+    text-decoration: none; 
+    color: #5d4037; 
+    font-weight: bold; 
+}
+
+/*
+Estilo dos links do menu.
+
+text-decoration:none
+Remove o sublinhado.
+
+color
+Define a cor do texto.
+
+font-weight:bold
+Deixa o texto em negrito.
+*/
+
+
+/* ============================================================
+   GRID DE CAPAS DOS LIVROS
+   ============================================================ */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 30px;
     padding: 50px;
 }
+
+/*
+Cria uma grade responsiva para organizar os livros.
+
+display:grid
+Ativa o sistema de grade.
+
+grid-template-columns
+Define as colunas.
+
+auto-fit
+Ajusta automaticamente o número de colunas.
+
+minmax
+Cada coluna terá no mínimo 180px e no máximo 1fr
+(ocupando o espaço disponível).
+
+gap
+Define espaço entre os cards.
+
+padding
+Espaçamento interno da área.
+*/
+
+
+/* ============================================================
+   CARD DOS LIVROS
+   ============================================================ */
 
 .book-card {
     text-decoration: none;
@@ -40,30 +238,121 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     border: 1px solid transparent;
 }
 
+/*
+Estilo do card que contém a capa do livro.
+
+background
+Fundo preto.
+
+padding
+Espaçamento interno.
+
+border-radius
+Cantos levemente arredondados.
+
+text-align:center
+Centraliza o conteúdo.
+
+transition
+Cria animação suave para efeitos.
+*/
+
+
 .book-card:hover {
     transform: translateY(-10px);
     border-color: #B22222;
 }
 
-.book-card img { width: 100%; border-radius: 2px; }
-.book-card h3 { color: #F5F5DC; margin-top: 10px; font-size: 1rem; }
+/*
+Efeito quando o usuário passa o mouse.
 
-/* O TRUQUE DO MODAL SEM JS */
+translateY(-10px)
+Move o card levemente para cima.
+
+border-color
+Borda muda para vermelho.
+*/
+
+
+.book-card img { 
+    width: 100%; 
+    border-radius: 2px; 
+}
+
+/*
+Faz a imagem ocupar toda largura do card.
+*/
+
+
+.book-card h3 { 
+    color: #F5F5DC; 
+    margin-top: 10px; 
+    font-size: 1rem; 
+}
+
+/*
+Título do livro.
+
+color
+Texto bege.
+
+margin-top
+Espaço entre a imagem e o título.
+
+font-size
+Define tamanho da fonte.
+*/
+
+
+/* ============================================================
+   MODAL (JANELA DE RESENHA)
+   ============================================================ */
+
 .modal-overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.85);
-    display: none; /* Escondido por padrão */
+    display: none;
     z-index: 1000;
 }
 
-/* Quando o ID do modal é o destino do link (URL termina em #livro1) */
+/*
+Camada escura que cobre toda a tela.
+
+position:fixed
+Fica fixa sobre a página.
+
+width/height 100%
+Ocupa toda a tela.
+
+background rgba
+Cria fundo escuro semi-transparente.
+
+display:none
+Fica escondido inicialmente.
+*/
+
+
 .modal-overlay:target {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*
+Quando o modal é ativado por um link (#livro1 etc):
+
+display:flex
+Ele aparece.
+
+justify-content:center
+Centraliza horizontalmente.
+
+align-items:center
+Centraliza verticalmente.
+*/
+
 
 .modal-content {
     background: #F5F5DC;
@@ -77,12 +366,55 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     animation: zoomIn 0.3s ease;
 }
 
+/*
+Caixa principal da resenha.
+
+background
+Fundo bege.
+
+max-width
+Limita o tamanho.
+
+border
+Borda vermelha.
+
+animation
+Aplica efeito de entrada.
+*/
+
+
+/* ============================================================
+   ANIMAÇÃO DO MODAL
+   ============================================================ */
+
 @keyframes zoomIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-.img-modal { width: 150px; border: 2px solid #000; margin-bottom: 20px; }
+/*
+Cria efeito de zoom ao abrir o modal.
+*/
+
+
+/* ============================================================
+   IMAGEM DO MODAL
+   ============================================================ */
+
+.img-modal { 
+    width: 150px; 
+    border: 2px solid #000; 
+    margin-bottom: 20px; 
+}
+
+/*
+Define tamanho e borda da capa dentro do modal.
+*/
+
+
+/* ============================================================
+   TEXTO DA RESENHA
+   ============================================================ */
 
 .texto-scroll {
     max-height: 250px;
@@ -93,7 +425,24 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     line-height: 1.6;
 }
 
-/* BOTÃO DE FECHAR */
+/*
+Área do texto da resenha.
+
+max-height
+Altura máxima.
+
+overflow-y:auto
+Cria rolagem se o texto for grande.
+
+text-align:justify
+Texto alinhado dos dois lados.
+*/
+
+
+/* ============================================================
+   BOTÃO DE FECHAR
+   ============================================================ */
+
 .close-btn {
     position: absolute;
     top: 10px; right: 20px;
@@ -103,7 +452,14 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     font-weight: bold;
 }
 
-/* BOTÃO AMAZON */
+/*
+Botão "X" que fecha o modal.
+*/
+
+/* ============================================================
+   BOTÃO AMAZON
+   ============================================================ */
+
 .btn-amazon {
     display: inline-block;
     background: #B22222;
@@ -116,8 +472,31 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     transition: 0.3s;
 }
 
+/*
+Botão que leva para compra do livro.
+*/
+
 .btn-amazon:hover {
     background: #000;
     color: #B22222;
 }
-.main-footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; background-color: #fcf6dc; }
+
+/*
+Efeito ao passar o mouse.
+*/
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+
+.main-footer { 
+    text-align: center; 
+    padding: 40px; 
+    color: #888; 
+    font-size: 0.8rem; 
+    background-color: #fcf6dc; 
+}
+
+/*
+Estilo do rodapé do site.
+*/
