@@ -1,0 +1,90 @@
+/* ============================================================
+   CONFIGURAÇÕES GERAIS
+   ============================================================ */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    background-color: #B22222; 
+    font-family: 'Georgia', serif; 
+    color: #000; 
+}
+
+/* ============================================================
+   CABEÇALHO (HEADER)
+   ============================================================ */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #fcf6dc;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img {
+    width: 150px;
+    height: auto;
+    transition: 0.3s;
+}
+
+.menu ul { display: flex; list-style: none; gap: 20px; }
+.menu a { 
+    text-decoration: none;
+    color: #5d4037;
+    font-weight: bold; 
+}
+
+/* Container que organiza os cards em grade (grid) */
+.card-grid {
+    display: grid;
+    /* Divide em colunas iguais que se ajustam sozinhas (mínimo 220px) */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;      /* Espaço entre os cards */
+    padding: 50px 10%; 
+    min-height: 70vh; /* Garante que o conteúdo ocupe a tela antes do rodapé */
+}
+
+/* O Card Bege individual */
+.book-card {
+    background-color: #fcf6dc; /* Bege igual ao header */
+    padding: 30px;
+    border-radius: 12px;       /* Bordas arredondadas */
+    text-align: center;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    transition: transform 0.3s ease; /* Efeito de movimento */
+    border: 1px solid #dcd7bb;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.book-card:hover {
+    transform: scale(1.05); /* Aumenta o card levemente */
+}
+
+/* Estilo dos nomes (Aline, Nina, Graziele) */
+.book-card h2 {
+    color: #5d4037; /* Marrom para contraste */
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+/* Estilo do texto de descrição */
+.book-card p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+.main-footer { 
+    text-align: center; 
+    padding: 40px; 
+    color: #888; 
+    font-size: 0.8rem; 
+    background-color: #fcf6dc; 
+}

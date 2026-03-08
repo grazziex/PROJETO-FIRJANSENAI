@@ -1,0 +1,123 @@
+/* CORES: Bege (#F5F5DC), Vermelho (#B22222), Preto (#000000) */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #fcf6dc;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img{
+    width: 150px; /* Aumenta o tamanho da imagem da logo */
+    height: auto;
+    transition: 0.3s
+}
+.logo-texto { font-weight: bold; font-size: 1.5rem; color: #5d4037; }
+
+.menu ul { display: flex; list-style: none; gap: 20px; }
+.menu a { text-decoration: none; color: #5d4037; font-weight: bold; }
+
+/* GRID DE CAPAS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+.book-card {
+    text-decoration: none;
+    background: #000;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    border-color: #B22222;
+}
+
+.book-card img { width: 100%; border-radius: 2px; }
+.book-card h3 { color: #F5F5DC; margin-top: 10px; font-size: 1rem; }
+
+/* O TRUQUE DO MODAL SEM JS */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none; /* Escondido por padrão */
+    z-index: 1000;
+}
+
+/* Quando o ID do modal é o destino do link (URL termina em #livro1) */
+.modal-overlay:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #F5F5DC;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    border: 4px solid #B22222;
+    text-align: center;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.img-modal { width: 150px; border: 2px solid #000; margin-bottom: 20px; }
+
+.texto-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: justify;
+    margin: 20px 0;
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+/* BOTÃO DE FECHAR */
+.close-btn {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #B22222;
+    font-weight: bold;
+}
+
+/* BOTÃO AMAZON */
+.btn-amazon {
+    display: inline-block;
+    background: #B22222;
+    color: #F5F5DC;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: 0.3s;
+}
+
+.btn-amazon:hover {
+    background: #000;
+    color: #B22222;
+}
+.main-footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; background-color: #fcf6dc; }
