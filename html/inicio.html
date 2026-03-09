@@ -11,17 +11,16 @@
     <div class="header-container"> <!-- Container que organiza os elementos do cabeçalho -->
         <div class="logo"> <!-- Div reservada para a logo -->
             <img src="../images/9bc037e3-6cf5-42ea-b38a-3bbbf82689cf - Editado.png" alt="Logo" width="60">
+            
         </div> <!-- Fecha a div da logo -->
-        <nav class="menu"> <!-- Área de navegação (menu do site) -->
-            <ul> <!-- Lista não ordenada para organizar os itens do menu -->
-                <li><a href="../html/inicio.html">Início</a></li>
-                <!-- Item do menu que leva para a página inicial -->
-                <li><a href="../html/resenhas.html">Resenhas</a></li>
-                <!-- Item do menu que leva para a página de resenhas -->
-                <li><a href="../html/sobre-nos.html">Sobre nós</a></li>
-                <!-- Item do menu que leva para a página sobre a equipe -->
-            </ul> <!-- Fecha a lista do menu -->
-        </nav> <!-- Fecha a área de navegação -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav class="menu" id="menu">
+    <ul>
+        <li><a href="../html/inicio.html">Início</a></li>
+        <li><a href="../html/resenhas.html">Resenhas</a></li>
+        <li><a href="../html/sobre-nos.html">Sobre nós</a></li>
+    </ul>
+</nav>
     </div> <!-- Fecha o container do cabeçalho -->
 </header> 
 <div class="carousel-wrapper"> <!-- Container externo do carrossel -->
@@ -64,5 +63,6 @@
     <p>&copy; 2026 Spoiler Club - Aline, Nina e Graziele</p>
     <!-- Texto do rodapé com copyright -->
 </footer> 
+<script src="script.js"></script>
 </body> 
 </html> 
