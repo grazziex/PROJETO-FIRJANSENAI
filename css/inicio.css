@@ -41,6 +41,16 @@ body { background-color:#B22222; font-family: 'Georgia', serif; color: #000; }
     color: #5d4037;        /* Define a cor marrom para o texto */
     font-weight: bold;     /* Deixa o texto em negrito */
 }
+.menu {
+    display: none;
+}
+
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 /* ============================================================
    CARROSSEL (CONTAINER PRINCIPAL)
