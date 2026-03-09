@@ -73,6 +73,16 @@ body {
     color: #5d4037;        /* Cor marrom */
     font-weight: bold;     /* Deixa o texto em negrito */
 }
+.menu {
+    display: none;
+}
+
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 /* ============================================================
    GRID DE CARDS
