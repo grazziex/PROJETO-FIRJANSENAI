@@ -204,10 +204,13 @@ Deixa o texto em negrito.
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 30px;
-    padding: 50px;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 30px;                            /* Mais espaço entre eles */
+    padding: 30px;
+    max-width: 1000px;                    /* Largura máxima fixa */
+    margin: 0 auto;                       /* CENTRALIZA o grid na página */
 }
+
 
 /*
 Cria uma grade responsiva para organizar os livros.
@@ -509,3 +512,19 @@ Efeito ao passar o mouse.
 /*
 Estilo do rodapé do site.
 */
+.secao-busca {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Isso cria um espaço elegante entre a busca e os livros */
+}
+
+#campoPesquisa {
+    width: 80%;       /* Ocupa 80% do espaço disponível */
+    max-width: 400px; /* Não deixa passar de 400px para não ficar estranho */
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Bordas arredondadas dão um visual mais moderno */
+    text-align: center;
+}
